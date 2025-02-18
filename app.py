@@ -13,7 +13,7 @@ import pytz
 
 georgia_tz = pytz.timezone("Asia/Tbilisi")
 
-local_time = user.last_login.astimezone(georgia_tz).strftime('%Y-%m-%d %H:%M:%S')
+local_time = User.last_login.astimezone(georgia_tz).strftime('%Y-%m-%d %H:%M:%S')
 
 # 📌 Email ვერიფიკაციის ტოკენის გენერაცია
 s = URLSafeTimedSerializer(app.config['SECRET_KEY'])
