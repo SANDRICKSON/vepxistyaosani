@@ -15,9 +15,9 @@
                     <strong class="me-2">ელ-ფოსტა:</strong> 
                     <span style="color: #362ecc;">{{ current_user.email }}</span>
                 </p>
-                <p class="list-group-item last-login">
+<p class="list-group-item last-login">
     <i class="fas fa-clock"></i> <strong>ბოლო აქტივობა:</strong> 
-    <span>{{ current_user.last_login.strftime('%Y-%m-%d %H:%M:%S') }}</span>
+    <span>{{ current_user.last_login.astimezone(pytz.timezone('Asia/Tbilisi')).strftime('%Y-%m-%d %H:%M:%S') }}</span> (თბილისი დროით)
 </p>
 
                 <p class="list-group-item" style="font-size: 1.1rem; font-weight: 500; color: #34495e;">
